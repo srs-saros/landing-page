@@ -1,11 +1,17 @@
 # landing-page
-Page that helps present the project to external users
 
-# Getting Started with Create React App
+Page that presents the SRS project to external users
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Contribute
 
-## Available Scripts
+To execute and develop in local this project:
+
+1. Check your Node version as [detailed here](#node-version).
+2. Install dependencies inside the root folder with `npm install`.
+3. Create a local file `.env.local` with the required variables as shown in the `.env` of example file.
+4. Execute `npm run start` to start the project.
+
+## Available scripts
 
 In the project directory, you can run:
 
@@ -32,19 +38,18 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `npm run lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Runs ESLint in a quiet mode and checks coding/formatting errors.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Notes
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Node version
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+The current project is being developed with the Node version specified in the `.nvmrc` file. You can check your Node version with `node --version` and use/change it if appropiated or use something like [nvmrc](https://github.com/nvm-sh/nvm/blob/master/README.md) and execute `nvm use` in the root folder of the project to set to the project version.
 
-## Learn More
+## Git hooks
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+We have set a `pre-push` git hook to be executed _before each push_ that runs the lint and test validations in order to avoid having testing, formatting and coding standards errors.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
+<sub>This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).</sub>
